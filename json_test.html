@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JSON Stringify and Parse</title>
+</head>
+<body>
+	<ul id ="people"> </ul>
+</body>
+</html>
+
+<script> 
+var person = [
+  {
+	name: "Ali",
+	age: "20"
+  },
+  {
+	name: "Diana",
+	age: "21"
+  },
+  {
+  	name: "Sarah",
+  	age: "17"
+  }
+  ];
+var dog ={
+	name: "Jeff",
+	breed: "Pitbull",
+	age: "5"
+}
+	person = JSON.stringify(person);
+	person = JSON.parse(person);
+	console.log(person[1].name);
+
+	dog = JSON.stringify(dog);
+	console.log(dog);
+	
+	var output = '';
+	for (var i = 0; i < person.length; i++){
+		output += '<li>' +person[i].name+ '</li>';
+	}
+	document.getElementById('people').innerHTML = output;
+</script>
+
+
